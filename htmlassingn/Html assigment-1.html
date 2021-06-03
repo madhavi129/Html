@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        }
+        table{
+            border:ridge 5px #fcfcfc;
+            background-color: rgb(255, 127, 144);
+        }
+        label{
+            font-size: 25px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+            padding: 60px;
+        }
+        input[type=text],input[type=number],input[type=email],input[type=Gender],select{  
+            width: 60%;
+            padding: 15px;
+            border: 2px solid rgb(204, 204, 204);
+            border-radius: 5px;
+            margin-top: 7px;
+            margin-bottom: 7px;
+        }
+        input[type=number]{
+           margin-left: 35px; 
+        }
+        input[type=email]{
+            margin-left: 45px;
+        }
+        input[type=Gender]{
+            margin-left: 45px;
+        }
+        select{
+            width: 50%;
+            margin-left: 25px;
+        }
+        select{
+            width: 50%;
+            margin-left: 25px;
+        }
+        input[type=submit] {
+            background-color: #b02ec1;
+            color: white;
+            padding: 15px 25px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+        }
+        input[type=submit]:hover {
+            background-color: #6545a0;
+        }
+        
+    </style>
+</head>
+<body bgcolor="#ccffff">
+    <center>
+    <table border="0">
+        <tr>
+            <td><img src="company logo.jpeg" alt="Company Logo" height="100" width="300"></td>
+            <td><h1>Mphasis Ltd</h1>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <form name="demoform" onsubmit="return validateForm()" method="POST">
+                    <fieldset>
+                        <legend>Personal Details:</legend>
+                            <label for="fname">First Name</label>
+                            <input type="text" class="fname" id="fname" placeholder="First Name" patter="[A-Z][a-z]"required><br>
+                            <label for="lname">Last Name</label>
+                            <input type="text" class="lname" id="lname" placeholder="Last Name" required><br>
+                            <label for="email">Email</label>
+                            <input type="email" class="mail" id="mail" placeholder="uremail@gamil.com" required><br>
+                            <label for="Gender">Gender</label>
+                            <select id="Gender" name="Gender" required></select>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <label for="country">Country</label>
+                            <select id="country" name="country" required>
+                                <option value="india">India</option>
+                                <option value="usa">USA</option>
+                                <option value="canada">Canada</option>
+                                <option value="england">England</option>
+                            </select></select><br>
+                            <label for="phone">Phone</label>
+                            <input type="number" class="phone" id="phone" placeholder="1234-56-6789" pattern="[0-9]{4}-[0-9]{2}-[0-9]{4}" required><br>
+                            <center><input type="submit"></center>
+                    </fieldset>
+                </form>
+            </td>
+        </tr>
+    </table>
+</center>
+</body>
+</html>
